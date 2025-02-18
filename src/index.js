@@ -36,23 +36,6 @@ app.get("/s_login", (req, res) => {
   res.render("s_login")
 })
 
-app.get("/add_class", (req, res) => {
-  res.render("add_class")
-})
-
-app.get("/add_student", (req, res) => {
-  res.render("add_student")
-})
-
-app.get("/add_lecturer", async (req, res) => {
-        const classes = await Class.find({}, "classID");
-        res.render("add_lecturer", { classes });
-});
-
-app.get("/assign_subjects", (req, res) => {
-    res.render("assign_subjects");
-});
-
 app.get(`/l_homepage/:username`, (req, res) => {
     res.render("l_homepage");
 });
@@ -66,9 +49,9 @@ app.get("/admin_page", (req, res) => {
 // });
 
 
-// -------------------------------------------------------------
-// --- ROUTES FOR ADDING STUDENTS, LECTURERS AND CLASSES -------
-// -------------------------------------------------------------
+// -------------------------------------------------------------------------
+// --- ADMIN PAGE: ROUTES FOR ADDING STUDENTS, LECTURERS AND CLASSES -------
+// -------------------------------------------------------------------------
 
 // API to Fetch Classes
 app.get("/api/classes", async (req, res) => {
@@ -144,9 +127,9 @@ app.post("/api/add-lecturer", async (req, res) => {
     }
 });
 
-// ------------------------------------------------
-// --- SUBJECT-LECTURER ASSIGNMENT ROUTES ---------
-// ------------------------------------------------
+// ------------------------------------------------------------
+// --- ADMIN PAGE: SUBJECT-LECTURER ASSIGNMENT ROUTES ---------
+// ------------------------------------------------------------
 app.get("/api/subject-assignments", async (req, res) => {
     try {
         const assignments = await SubjectAssignment
@@ -247,7 +230,7 @@ async function checkTimeConflict(newClass, newSubject, lecturer_id) {
         }
     }
 
-    return false; // No conflicts found
+    return false;
 }
 
 app.get("/api/lecturers", async (req, res) => {
@@ -647,20 +630,21 @@ app.get('/s_homepage/:rollNumber', async (req, res) => {
       const rollNumber = req.params.rollNumber;
   
       // Fetch student data from the database
-      const studentData = await Student.findOne({ rollnumber: rollNumber }); // Correct field name
+      const studentData = await Student.findOne({ rollnumber: rollNumber }); 
   
       if (!studentData) {
         return res.status(404).send('Student not found');
       }
   
       // Render the s_homepage.ejs template with student data
-      res.render('s_homepage', { student: studentData }); // Pass the full object as 'student'
+      res.render('s_homepage', { student: studentData });
     } catch (err) {
       console.error(err);
       res.status(500).send('Internal Server Error');
     }
   });
   
+  // Route: For Student's general attendance stats
   app.get('/api/student-attendance/:rollNumber', async (req, res) => {
     try {
         const rollNumber = req.params.rollNumber;
@@ -712,7 +696,7 @@ app.get('/s_homepage/:rollNumber', async (req, res) => {
     }
 });
 
-  // Add this route to index.js
+// Route: For subject-wise attendance
   app.get('/api/student-subject-attendance/:rollNumber', async (req, res) => {
     try {
         const rollNumber = req.params.rollNumber;
@@ -785,7 +769,7 @@ app.get('/s_homepage/:rollNumber', async (req, res) => {
     }
 });
 
-
+// Route: To retrieve student's marks
 app.get('/api/student-marks/:rollNumber', async (req, res) => {
     try {
         const rollNumber = req.params.rollNumber;
@@ -862,7 +846,7 @@ app.post("/lecturer-login", async (req, res) => {
         if (password !== lecturer.password) {
             return res.status(401).json({ error: "Invalid password" });
         }
-        
+
         res.json({ redirect: `/l_homepage/${username}` });
     } catch (error) {
         res.status(500).json({ error: error.message });
