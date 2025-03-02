@@ -68,11 +68,18 @@ The **Academic Management Portal** is a web-based system designed to streamline 
 
 ### Lecturer Dashboard
 - Login as a lecturer to take attendance, upload marks, and view analytics.
-![Lecturer Dashboard](<INSERT_IMAGE_URL>)
+<img src="screenshots/lec1.png" width="700">
+<img src="screenshots/lec2.png" width="700">
+<img src="screenshots/lec3.png" width="700">
+<img src="screenshots/lec4.png" width="700">
+<img src="screenshots/lec5.png" width="700">
 
 ### Admin Dashboard
 - Login as an admin to manage users, subjects, and classes.
-![Admin Dashboard](<INSERT_IMAGE_URL>)
+<img src="screenshots/admin1.png" width="700">
+<img src="screenshots/admin2.png" width="700">
+<img src="screenshots/admin3.png" width="700">
+<img src="screenshots/admin4.png" width="700">
 
 
 ## Contributing
