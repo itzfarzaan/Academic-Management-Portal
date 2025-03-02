@@ -71,8 +71,10 @@ The **Academic Management Portal** is a web-based system designed to streamline 
 <img src="screenshots/lec1.png" width="700">
 <img src="screenshots/lec2.png" width="700">
 <img src="screenshots/lec3.png" width="700">
-<img src="screenshots/lec4.png" width="700">
-<img src="screenshots/lec5.png" width="700">
+<p align="center">
+  <img src="screenshots/lec4.png" width="45%">
+  <img src="screenshots/lec5.png" width="45%">
+</p>
 
 ### Admin Dashboard
 - Login as an admin to manage users, subjects, and classes.
@@ -92,4 +94,4 @@ Contributions are welcome! Please submit a Pull Request with your changes.
 
 ## Copyright
 
-This project is copyrighted and protected under intellectual property laws. Unauthorized use, reproduction, distribution, or modification of this project is strictly prohibited without explicit permission from the author.
+This project is copyrighted and protected under intellectual property laws. Unauthorized use, reproduction, or distribution of this project is strictly prohibited without explicit permission from the author.
