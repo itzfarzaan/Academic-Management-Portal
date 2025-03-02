@@ -63,8 +63,8 @@ The **Academic Management Portal** is a web-based system designed to streamline 
 - Login as a student to view attendance, marks, and personal details.
 ![Student Dashboard](screenshots/student1.png)
 ![Student Marks](screenshots/student2.png)
-![Student Insights](screenshots/student3.png)
-<img src="screenshots/student3.png" width="500">
+![Student Insights]<img src="screenshots/student3.png" width="800">
+
 
 ### Lecturer Dashboard
 - Login as a lecturer to take attendance, upload marks, and view analytics.
