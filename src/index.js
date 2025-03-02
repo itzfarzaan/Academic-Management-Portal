@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt")
 const bodyParser = require("body-parser")
 const { Student, Lecturer, Class, Attendance, SubjectAssignment, Marks} = require("./config")
 const mongoose = require("mongoose")
+require('dotenv').config()
 
 const app = express()
 
