@@ -75,3 +75,7 @@ The **Academic Management Portal** is a web-based system designed to streamline 
 ## Contributing
 
 Contributions are welcome! Please submit a Pull Request with your changes.
+
+## Copyright
+
+This project is copyrighted and protected under intellectual property laws. Unauthorized use, reproduction, distribution, or modification of this project is strictly prohibited without explicit permission from the author.
