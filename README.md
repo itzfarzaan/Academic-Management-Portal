@@ -76,6 +76,10 @@ The **Academic Management Portal** is a web-based system designed to streamline 
 
 ### Admin Dashboard
 - Login as an admin to manage users, subjects, and classes.
+- <p align="center">
+  <img src="screenshots/admin1.png" width="45%">
+  <img src="screenshots/admin2.png" width="45%">
+</p>
 <img src="screenshots/admin1.png" width="700">
 <img src="screenshots/admin2.png" width="700">
 <img src="screenshots/admin3.png" width="700">
